@@ -28,3 +28,12 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #69353f;
+  height: 50px;
+  color: white;
+}

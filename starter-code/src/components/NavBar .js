@@ -41,18 +41,18 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink
-              to="/keto"
+              to="/indian"
               className={(navData) => (navData.isActive ? styles.actives : "")}
             >
-              Keto
+              Indian
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/cocktails"
+              to="/favorites"
               className={(navData) => (navData.isActive ? styles.actives : "")}
             >
-              Cocktails
+              Favorites
             </NavLink>
           </li>
         </ul>

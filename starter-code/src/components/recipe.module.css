@@ -11,6 +11,17 @@
   padding: 20px 30px;
 }
 
+.recipe h3 {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.recipe a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
 .image {
   border-radius: 10px;
   width: 280px;

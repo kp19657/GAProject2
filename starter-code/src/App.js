@@ -1,28 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "./components/NavBar ";
+import CartContext from "./react-context";
 import Main from "./Main";
-import Japanese from "./components/Japanese";
+import Favorites from "./components/Favorites";
+import NavBar from "./components/NavBar ";
 import French from "./components/French";
+import Japanese from "./components/Japanese";
 import Chinese from "./components/Chinese";
-import Keto from "./components/Keto";
-import Cocktails from "./components/Cocktails";
-import "./App.css";
+import Indian from "./components/Indian";
 
 const App = () => {
+  const [favoriteItem, setFavoriteItem] = useState([]);
+
   return (
-    <div className="App">
+    <>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/japanese" element={<Japanese />} />
-        <Route path="/french" element={<French />} />
-        <Route path="/chinese" element={<Chinese />} />
-        <Route path="/keto" element={<Keto />} />
-        <Route path="/cocktails" element={<Cocktails />} />
-      </Routes>
-    </div>
+      <CartContext.Provider value={{ favoriteItem, setFavoriteItem }}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/french" element={<French />} />
+          <Route path="/japanese" element={<Japanese />} />
+          <Route path="/chinese" element={<Chinese />} />
+          <Route path="/indian" element={<Indian />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </CartContext.Provider>
+    </>
   );
 };
-
+// fireUp={saveToCart}
 export default App;

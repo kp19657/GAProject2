@@ -27,8 +27,10 @@ const Cocktails = () => {
           key={Math.random()}
           title={item.recipe.label}
           calories={item.recipe.calories}
+          yield={item.recipe.yield}
           image={item.recipe.image}
           ingredients={item.recipe.ingredients}
+          url={item.recipe.url}
         />
       ))}
     </div>
