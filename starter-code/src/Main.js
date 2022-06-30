@@ -25,12 +25,10 @@ function Main(props) {
     );
     const data = await response.json();
     setRecipes(data.hits);
-    // console.log(data.hits);
   };
 
   const updateSearch = (event) => {
     setSearch(event.target.value);
-    // console.log(search);
   };
 
   const getQuery = (event) => {
@@ -40,7 +38,6 @@ function Main(props) {
   };
 
   const saveAsFav = (item) => {
-    // reactCtx.setFavoriteItem(item) ;
     reactCtx.setFavoriteItem((prevState) => {
       return [...prevState, item];
     });

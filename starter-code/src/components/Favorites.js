@@ -1,27 +1,16 @@
 import React, { useContext } from "react";
 import CartContext from "../react-context";
 import style from "./recipe.module.css";
+import "../App.css";
 
 const Favorites = (props) => {
   let reactCtx = useContext(CartContext);
 
-  // const [list, setList] = useState(reactCtx.favoriteItem);
-
   const removeItem = (index) => {
-    // reactCtx.favoriteItem = reactCtx.favoriteItem.filter((d, i) => i !== index);
     reactCtx.setFavoriteItem((prevState) => {
       return prevState.filter((d, i) => i !== index);
     });
   };
-
-  // reactCtx.setFavoriteItem((prevState) => {
-  //   return [...prevState, item];
-  // });
-
-  // const cartArr = cart.filter((d, i) => i !== index);
-  //   setCart(cartArr);
-
-  // console.log("this is the reactCtx.favoriteItem", reactCtx.favoriteItem);
 
   return (
     <div className="App">

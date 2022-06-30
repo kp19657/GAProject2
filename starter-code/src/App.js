@@ -28,5 +28,4 @@ const App = () => {
     </>
   );
 };
-// fireUp={saveToCart}
 export default App;

@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react";
-import CartContext from "../react-context";
+import React from "react";
 import style from "./recipe.module.css";
 
 const Recipe = (props) => {

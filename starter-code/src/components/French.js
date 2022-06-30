@@ -26,7 +26,6 @@ const French = (props) => {
   };
 
   const saveAsFav = (item) => {
-    // reactCtx.setFavoriteItem(item) ;
     reactCtx.setFavoriteItem((prevState) => {
       return [...prevState, item];
     });
