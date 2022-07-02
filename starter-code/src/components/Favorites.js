@@ -14,6 +14,7 @@ const Favorites = (props) => {
 
   return (
     <div className="App">
+      {/* map from react useContext */}
       {reactCtx.favoriteItem.map((item, index) => {
         return (
           <div className="recipes">

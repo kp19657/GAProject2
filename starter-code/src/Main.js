@@ -38,6 +38,7 @@ function Main(props) {
   };
 
   const saveAsFav = (item) => {
+    // saves favorite recipe to react content
     reactCtx.setFavoriteItem((prevState) => {
       return [...prevState, item];
     });
